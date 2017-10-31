@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: DIN Pro,sans-serif;	
+}
+
+.divContainer{
+    background-color: #E00F32;
+	width: 100vw;
+	height: 100vh;
+}
+
+.divMenuLateral{
+	background-color: #232222;
+	float: left;
+	width: 4vw;
+	height: 100vh;
+}
+
+.spanIcone{
+	text-decoration: none;
+	color: red;
+}
+
+.spanIcone:hover{
+	background-color: #E5E5E5;
+}
+
+/* SPAN SPAN SPAN SPAN */
+
+.margemUp{
+	padding-top: 50%;
+	padding-bottom: 50%;
+	padding-left: 38%;
+	padding-right: 38%;
+}
+
+h1, h2, h3, h4, h5{
+	margin: 0;
+	padding: 0;
+	font-family: DIN Pro,sans-serif;	
+}

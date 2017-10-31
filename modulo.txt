@@ -1,0 +1,7 @@
+home - noticias
+select - criticas
+input - usuario
+nuvem - nuvem
+
+====================================
+
