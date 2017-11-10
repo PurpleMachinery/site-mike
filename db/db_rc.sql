@@ -21,6 +21,7 @@ CREATE TABLE livros(
     fk_editora INT NOT NULL REFERENCES id_editora,
     imgCapa NVARCHAR(30) DEFAULT 'without' NOT NULL,
     anoEdicao YEAR NOT NULL,
+    sinopse TEXT,
     
     PRIMARY KEY (id_livro)
 );
@@ -50,4 +51,14 @@ INSERT INTO livros
 ('9788580415216','O Feiticeiro de Terramar - Ciclo Terramar', 4, 'ofeiticeiro',1, 1968),
 ('9788576573005','Neuromancer', 5, 'neuromancer',3, 2016);
 
-SELECT livros.titulo, autores.nome, livros.isbn, livros.imgCapa, editoras.nome FROM livros join autores join editoras where livros.fk_autor=autores.id_autor and livros.fk_editora = editoras.id_editora ;
+UPDATE livros
+SET sinopse = "Este livro acompanha a trajetória de Kote e as duas forças que movem sua vida - 
+o desejo de aprender o mistério por trás da arte de nomear as coisas e a necessidade de reunir 
+informações sobre o Chandriano - os lendários demônios que assassinaram sua família no passado. 
+Quando esses seres do mal reaparecem na cidade, um cronista suspeita de que o misterioso Kote 
+seja o personagem principal de diversas histórias que rondam a região e decide aproximar-se dele 
+para descobrir a verdade. Pouco a pouco, a história de Kote vai sendo revelada, assim como sua multifacetada 
+personalidade - notório mago, esmerado ladrão, amante viril, herói salvador, músico magistral, assassino infame."
+where id_livro = 1;
+
+select * from livros;
