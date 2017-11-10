@@ -63,6 +63,7 @@
 }
 
 .footer{
+	position: bottom;
 	padding-top: 3%;
 	padding-bottom: 3%;
 	min-width: 15%;

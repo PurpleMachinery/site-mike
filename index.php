@@ -34,7 +34,7 @@
 					mysqli_select_db(  $con ,$database) or die( 'Erro na seleção do banco' );
 					 
 					# Executa a query desejada 
-					$query = "SELECT * FROM livros"; 
+					$query = "SELECT livros.titulo, autores.nome, livros.isbn, livros.imgCapa, editoras.nome as ne FROM livros join autores join editoras where livros.fk_autor=autores.id_autor and livros.fk_editora = editoras.id_editora "; 
 					$result_query = mysqli_query($con, $query) or die(' Erro na query:' . $query . ' ' . mysqli_error() ); 
 					 
 					# Exibe os registros na tela 
@@ -43,8 +43,9 @@
 									"<img src='img/capas/$row[imgCapa].jpg'>".
 									"<hgroup>".										
 										"<h2>$row[titulo]</h2>".
-										"<h3>$row[autor]</h3>".
-										"<h4>$row[isbn]</h4>". 
+										"<h3>$row[nome]</h3>".
+										"<h4>$row[ne]</h4>". 
+										"<h5>$row[isbn]</h5>". 
 									"</hgroup>" .
 									"<br/>".
 								"</div></a>";
