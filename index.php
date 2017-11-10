@@ -11,7 +11,7 @@
 	<body>
 	<div class="divContainer">
 		<div class="divMenuLateral">
-			<a href="#"><span class="spanIcone margemUp glyphicon glyphicon-home"></span></a><br/>
+			<a href="index.php"><span class="spanIcone margemUp glyphicon glyphicon-home"></span></a><br/>
 			<a href="#"><span class="spanIcone margemUp glyphicon glyphicon-user"></span></a><br/>
 			<a href="#"><span class="spanIcone margemUp glyphicon glyphicon-search"></span></a><br/>
 			<a href="#"><span class="spanIcone margemUp glyphicon glyphicon-cloud"></span></a>
@@ -39,18 +39,21 @@
 					 
 					# Exibe os registros na tela 
 					while ($row = mysqli_fetch_array($result_query)) { 
-						print "<div class='bloco'>".
-									"<hgroup>".
-										"<img src='img/capas/$row[imgCapa].jpg'>".
+						print "<a href='#'><div class='bloco'>".
+									"<img src='img/capas/$row[imgCapa].jpg'>".
+									"<hgroup>".										
 										"<h2>$row[titulo]</h2>".
 										"<h3>$row[autor]</h3>".
 										"<h4>$row[isbn]</h4>". 
 									"</hgroup>" .
 									"<br/>".
-								"</div>";
+								"</div></a>";
 					}					 
 				?>
 			</center>		
+		</div>
+		<div class="footer">
+			<h1>Copyright 2017</h1>
 		</div>
 	</div>
 	</body>

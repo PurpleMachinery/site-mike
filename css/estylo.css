@@ -37,8 +37,37 @@
 	padding-right: 38%;
 }
 
+.livro{
+	padding-top: 2%;
+}
+
+.livro a{
+	text-decoration: none;
+	color: #232222;
+}	
+
 .bloco{
+	box-shadow: 5px 5px;
+	padding-top: 2%;
 	width: 30%; 
 	background-color: white;
-	border: 1px solid green;
+	border: 1px solid white;
+	border-radius: 30px;
+	margin-bottom: 3%;
+}
+
+.bloco img{
+	box-shadow: 5px 5px;
+	max-width: 50%;
+	margin-bottom: 3%;
+}
+
+.footer{
+	padding-top: 3%;
+	padding-bottom: 3%;
+	min-width: 15%;
+	min-height: 10%;
+	background-color: #232222;
+	color: #E00F32;
+	text-align: center;
 }
