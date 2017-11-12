@@ -17,16 +17,16 @@
 			<a href="add.php"><span class="spanIcone margemUp glyphicon glyphicon-cloud"></span></a>
 		</div>
 		<div class="pes">
-		<center>
-			<div class="formulario">
-				<form action="results.php" method="post">
-					<input type="radio" name="tipo" value="titulo">Titulo: <input type="text" name="titulo"><br/><br/>
-					<input type="radio" name="tipo" value="autor">Autor: <input type="text" name="autor"><br/><br/>
-					<input type="radio" name="tipo" value="editora">Editora: <input type="text" name="editora"><br/><br/>
-					<input type="radio" name="tipo" value="isbn">ISBN: <input type="text" name="isbn"><br/><br/>
-					<input type="submit" value="ENVIAR"><br/><br/><br/><br/><br/><br/><br/>
-				</form>
-			</div>
+		<center>	
+		<form action="adicionar.php" method="post">
+		<br/><br/><br/>
+		<div class="tt">
+			ISBN: <input type="text" name="isbn"><br/><br/>
+			TITULO: <input type="text" name="titulo"><br/><br/>
+			ANO: <input type="text" name="ano"><br/><br/>
+			<input type="submit">
+		</div>
+		</form>
 		</center>
 		</div>
 		<div class="footer">

@@ -14,7 +14,7 @@
 			<a href="index.php"><span class="spanIcone margemUp glyphicon glyphicon-home"></span></a><br/>
 			<a href="autores.php"><span class="spanIcone margemUp glyphicon glyphicon-user"></span></a><br/>
 			<a href="search.php"><span class="spanIcone margemUp glyphicon glyphicon-search"></span></a><br/>
-			<a href="#"><span class="spanIcone margemUp glyphicon glyphicon-cloud"></span></a>
+			<a href="add.php"><span class="spanIcone margemUp glyphicon glyphicon-cloud"></span></a>
 		</div>
 		<div class="pes">
 		<center>
