@@ -19,11 +19,11 @@
 		<div class="pes">
 		<center>
 			<div class="formulario">
-				<form action="results.php" method="post">
-					<input type="radio" name="tipo" value="titulo">Titulo: <input type="text" name="titulo"><br/><br/>
-					<input type="radio" name="tipo" value="autor">Autor: <input type="text" name="autor"><br/><br/>
-					<input type="radio" name="tipo" value="editora">Editora: <input type="text" name="editora"><br/><br/>
-					<input type="radio" name="tipo" value="isbn">ISBN: <input type="text" name="isbn"><br/><br/>
+				<form action="results.php" class="procurador" method="post">
+					<input type="radio" name="tipo" value="titulo">Titulo: <br/><input type="text" name="titulo" class="rdb"><br/><br/>
+					<input type="radio" name="tipo" value="autor">Autor: <br/><input type="text" name="autor" class="rdb"><br/><br/>
+					<input type="radio" name="tipo" value="editora">Editora: <br/><input type="text" name="editora" class="rdb"><br/><br/>
+					<input type="radio" name="tipo" value="isbn">ISBN: <br/><input type="text" name="isbn" class="rdb"><br/><br/>
 					<input type="submit" value="ENVIAR"><br/><br/><br/><br/><br/><br/><br/>
 				</form>
 			</div>

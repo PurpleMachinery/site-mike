@@ -19,21 +19,22 @@
 		<div class="pes">
 		<center>
 			<div class="formulario">
-				<?php
+				<?php 
+				
 					# Substitua abaixo os dados, de acordo com o banco criado
 					$user = "root"; 
 					$password = ""; 
 					$database = "red_box"; 
-					$query = "SELECT livros.titulo, autores.nome, livros.isbn, livros.imgCapa as ne FROM livros join autores where livros.fk_autor=autores.id_autor ";
+					$query = "SELECT autores.nome AS nome FROM autores";
 
 					# O hostname deve ser sempre localhost 
 					$hostname = "localhost"; 
 					 
 					# Conecta com o servidor de banco de dados 
-					$con=mysqli_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' ); 
+					$con=mysqli_connect($hostname, $user, $password ) or die( ' Erro na conexão ' ); 
 					 
 					# Seleciona o banco de dados 
-					mysqli_select_db(  $con ,$database) or die( 'Erro na seleção do banco' );
+					mysqli_select_db($con ,$database) or die( 'Erro na seleção do banco' );
 					 
 					# Executa a query desejada 
 
@@ -44,8 +45,6 @@
 						print "<div class='nulla'>".
 									"<hgroup>".										
 										"<h2>$row[nome]</h2>".
-										"<h3>$row[titulo]</h3>".
-										"<h5>$row[isbn]</h5>". 
 									"</hgroup>" .
 									"<br/>".
 								"</div>";
