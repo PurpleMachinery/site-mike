@@ -12,29 +12,19 @@
 	<div class="divContainer">
 		<div class="divMenuLateral">
 			<a href="index.php"><span class="spanIcone margemUp glyphicon glyphicon-home"></span></a><br/>
-			<a href="autores.php"><span class="spanIcone margemUp glyphicon glyphicon-user"></span></a><br/>
 			<a href="search.php"><span class="spanIcone margemUp glyphicon glyphicon-search"></span></a><br/>
-			<a href="add.php"><span class="spanIcone margemUp glyphicon glyphicon-cloud"></span></a>
+			<a href="add.php"><span class="spanIcone margemUp glyphicon glyphicon-plus"></span></a>
 		</div>
 		<div class="livro">
 			<center>
 				<?php  
-					# Substitua abaixo os dados, de acordo com o banco criado
-					$user = "root"; 
-					$password = ""; 
-					$database = "red_box"; 
-					 
-					# O hostname deve ser sempre localhost 
-					$hostname = "localhost"; 
-					 
-					# Conecta com o servidor de banco de dados 
-					$con=mysqli_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' ); 
+					include('methods/conect.php');
 					 
 					# Seleciona o banco de dados 
 					mysqli_select_db(  $con ,$database) or die( 'Erro na seleção do banco' );
 					 
 					# Executa a query desejada 
-					$query = "SELECT livros.titulo, autores.nome, livros.isbn, livros.imgCapa, editoras.nome as ne FROM livros join autores join editoras where livros.fk_autor=autores.id_autor and livros.fk_editora = editoras.id_editora "; 
+					$query = "SELECT livros.titulo, autores.nome, livros.isbn, livros.imgCapa, editoras.nome as ne, download as dd FROM livros join autores join editoras where livros.fk_autor=autores.id_autor and livros.fk_editora = editoras.id_editora "; 
 					$result_query = mysqli_query($con, $query) or die(' Erro na query:' . $query . ' ' . mysqli_error() ); 
 					 
 					# Exibe os registros na tela 
@@ -47,6 +37,7 @@
 										"<h4>$row[ne]</h4>". 
 										"<h5>$row[isbn]</h5>". 
 									"</hgroup>" .
+									"<a href='books/$row[dd]' class='btn' download>Download</a>".
 									"<br/>".
 								"</div>";
 					}					 

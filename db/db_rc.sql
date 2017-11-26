@@ -21,7 +21,7 @@ CREATE TABLE livros(
     fk_editora INT NOT NULL REFERENCES id_editora,
     imgCapa NVARCHAR(30) DEFAULT 'without' NOT NULL,
     anoEdicao YEAR NOT NULL,
-    sinopse TEXT,
+    download NVARCHAR(100) UNIQUE,
     
     PRIMARY KEY (id_livro)
 );
@@ -43,22 +43,10 @@ INSERT INTO autores
 ('William Gibson');
 
 INSERT INTO livros
-(isbn, titulo, fk_autor, imgCapa, fk_editora, anoEdicao) VALUES
-('9788599296493','O Nome do Vento - A Crônica do Matador Rei - Primeiro Dia',1, 'onomedovento', 1, 2009),
-('9788580410327','O Temor do Sábio – a Crônica do Matador do Rei - Segundo Dia',1, 'otemordosabio',1, 2011),
-('9788580415506', 'Mago - Aprendiz', 2, 'aprendiz',1, 2016),
-('9788565765695', 'A Rainha Vermelha', 3, 'arainhavermelha',2, 2015),
-('9788580415216','O Feiticeiro de Terramar - Ciclo Terramar', 4, 'ofeiticeiro',1, 1968),
-('9788576573005','Neuromancer', 5, 'neuromancer',3, 2016);
-
-UPDATE livros
-SET sinopse = "Este livro acompanha a trajetória de Kote e as duas forças que movem sua vida - 
-o desejo de aprender o mistério por trás da arte de nomear as coisas e a necessidade de reunir 
-informações sobre o Chandriano - os lendários demônios que assassinaram sua família no passado. 
-Quando esses seres do mal reaparecem na cidade, um cronista suspeita de que o misterioso Kote 
-seja o personagem principal de diversas histórias que rondam a região e decide aproximar-se dele 
-para descobrir a verdade. Pouco a pouco, a história de Kote vai sendo revelada, assim como sua multifacetada 
-personalidade - notório mago, esmerado ladrão, amante viril, herói salvador, músico magistral, assassino infame."
-where id_livro = 1;
-
-select * from livros;
+(isbn, titulo, fk_autor, imgCapa, fk_editora, anoEdicao, download) VALUES
+('9788599296493','O Nome do Vento - A Crônica do Matador Rei - Primeiro Dia',1, 'onomedovento', 1, 2009, 'O Nome Do Vento - Patrick Rothfuss.epub'),
+('9788580410327','O Temor do Sábio – a Crônica do Matador do Rei - Segundo Dia',1, 'otemordosabio',1, 2011, null),
+('9788580415506', 'Mago - Aprendiz', 2, 'aprendiz',1, 2016, null),
+('9788565765695', 'A Rainha Vermelha', 3, 'arainhavermelha',2, 2015, null),
+('9788580415216','O Feiticeiro de Terramar - Ciclo Terramar', 4, 'ofeiticeiro',1, 1968, null),
+('9788576573005','Neuromancer', 5, 'neuromancer',3, 2016, null);
