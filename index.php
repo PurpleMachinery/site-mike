@@ -30,7 +30,7 @@
 					# Exibe os registros na tela 
 					while ($row = mysqli_fetch_array($result_query)) { 
 						print "<div class='bloco'>".
-									"<img src='img/capas/$row[imgCapa].jpg'>".
+									"<img src='img/capas/$row[imgCapa]'>".
 									"<hgroup>".										
 										"<h2>$row[titulo]</h2>".
 										"<h3>$row[nome]</h3>".
